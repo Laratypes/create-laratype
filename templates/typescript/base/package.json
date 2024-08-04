@@ -1,0 +1,23 @@
+{
+  "name": "laratype",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "repository": {
+    "url": "https://github.com/Laratypes/Laratype"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc --build"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "tsx": "^4.16.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.4.2"
+  }
+}

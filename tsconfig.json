@@ -1,0 +1,10 @@
+{
+  "exclude": ["templates/**/*"],
+  "compilerOptions": {
+    "strict": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "outDir": "bin"
+  }
+}

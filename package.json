@@ -1,0 +1,28 @@
+{
+  "name": "create-laratype",
+  "version": "0.0.1",
+  "description": "Create laratype framework",
+  "scripts": {
+    "start": "tsx index.ts",
+    "build": "tsc --build"
+  },
+  "bin": {
+    "create-laratype": "./bin/index.js"
+  },
+  "keywords": [],
+  "author": "Ily1606 <no1.tuongnguyen@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "kolorist": "^1.8.0",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/prompts": "^2.4.9",
+    "tsx": "^4.16.5",
+    "typescript": "^5.5.4"
+  },
+  "files": [
+    "bin",
+    "templates"
+  ]
+}

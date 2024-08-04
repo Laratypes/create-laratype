@@ -1,0 +1,7 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.sortImports": "always",
+    "source.addMissingImports.ts": "always"
+  },
+  "editor.formatOnSave": true
+}
