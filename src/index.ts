@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 import { bold, green, red } from 'kolorist';
+import { resolve } from "path";
 import prompts from 'prompts';
 import { mergePackageJson } from './utils/deepMergeObject';
 import { createFolder, mergeDir } from './utils/mergeDir';
@@ -7,8 +8,8 @@ import { createFolder, mergeDir } from './utils/mergeDir';
 let defaultProjectName = 'laratype-test' // Change this to your desired project name
 
 let targetDir = defaultProjectName;
-const baseDir = './templates/typescript'
-const buildPath = (dir: string) => baseDir + '/' + dir;
+const baseDir = resolve(__dirname, '../templates/typescript')
+const buildPath = (dir: string) => resolve(baseDir, dir);
 
 const steps = {
   packageName: {
