@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import * as fs from 'fs';
 import { bold, green, red } from 'kolorist';
 import { resolve } from "path";
