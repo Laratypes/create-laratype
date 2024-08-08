@@ -1,6 +1,6 @@
 {
   "name": "laratype",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "author": "",
@@ -12,6 +12,7 @@
     "build": "tsc --build"
   },
   "dependencies": {
+    "@laratype/core": "^0.0.2",
     "dotenv": "^16.4.5",
     "tsx": "^4.16.5",
     "zod": "^3.23.8"
