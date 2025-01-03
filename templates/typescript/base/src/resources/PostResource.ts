@@ -1,5 +1,5 @@
+import { JsonResource } from "@laratype/http";
 import { Prisma } from "@prisma/client";
-import { JsonResource } from "@laratype/core";
 
 export default class PostResource<T extends Prisma.postsGetPayload<{}>[]> extends JsonResource<T> {
   public toJson() {

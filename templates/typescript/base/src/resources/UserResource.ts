@@ -1,7 +1,7 @@
+import { JsonResource } from "@laratype/http";
 import { Prisma } from "@prisma/client";
-import { JsonResource } from "@laratype/core";
 
-type WrapResource<T> = Array<T> 
+type WrapResource<T> = Array<T>
 
 export default class UserResource<T extends WrapResource<Prisma.usersGetPayload<{}>>> extends JsonResource<T> {
   public toJson() {

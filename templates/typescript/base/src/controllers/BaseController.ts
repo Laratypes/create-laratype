@@ -1,4 +1,5 @@
-import { Controller, GeneralTypesEnum, redirect, Request, response } from "@laratype/core";
+import { Controller, redirect, Request, response } from "@laratype/http";
+import { GeneralTypesEnum } from "@laratype/support";
 
 export class BaseController extends Controller {
 

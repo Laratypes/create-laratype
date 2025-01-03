@@ -10,6 +10,18 @@
     "skipLibCheck": true,
     "outDir": "dist",
     "moduleResolution": "node",
+    "paths": {
+      "laratype": ["../../src"],
+      "@laratype/*": ["../../packages/*/src"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
-  "exclude": ["node_modules", "<node_internals>/**"],
+  "include": [
+    "./config/*",
+    "./environment.d.ts",
+    "./src/*/*.d.ts",
+    "./src/*/*.ts"
+  ],
+  "exclude": ["node_modules", "<node_internals>/**"]
 }

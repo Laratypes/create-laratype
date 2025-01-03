@@ -1,4 +1,4 @@
-import { Request } from "@laratype/core"
+import { Request } from "@laratype/http"
 import { z } from "zod"
 export default class TestRequest extends Request {
 

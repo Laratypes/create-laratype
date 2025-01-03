@@ -1,3 +1,3 @@
-import { Serve } from "@laratype/core";
+import { Serve } from "laratype";
 
-export default Serve.prototype.create();
+export default Serve.create();

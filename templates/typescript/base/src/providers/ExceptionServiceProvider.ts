@@ -1,4 +1,4 @@
-import { Exception, Response, ServiceProvider } from "@laratype/core";
+import { Exception, ServiceProvider } from "@laratype/support";
 
 export default class ExceptionServiceProvider extends ServiceProvider {
 

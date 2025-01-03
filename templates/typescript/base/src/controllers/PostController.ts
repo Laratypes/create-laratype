@@ -1,20 +1,20 @@
-import { Controller } from "@laratype/core"
-import PostCollection from "../resources/PostCollection";
+import { Controller } from "@laratype/http";
 import { prisma } from "../../config/database/prisma";
+import PostCollection from "../resources/PostCollection";
 
 export default class PostController extends Controller {
 
   store() {
-    return prisma.posts.create({
+    return prisma.post.create({
       data: {
         content: "Hello World",
         title: "Test Post",
-        user_id: 1,
+        authorId: 1,
       }
     })
   }
 
   async index() {
-    return new PostCollection(await prisma.posts.findMany())
+    return new PostCollection(await prisma.post.findMany())
   }
 }
