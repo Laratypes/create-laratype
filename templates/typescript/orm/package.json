@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@laratype/database": "latest-version",
+    "mysql2": "^3.15.0"
+  }
+}

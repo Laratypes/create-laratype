@@ -1,24 +1,25 @@
 {
-  "name": "laratype",
+  "name": "laratype-test",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "author": "",
+  "type": "module",
   "repository": {
-    "url": "https://github.com/Laratypes/Laratype"
+    "url": ""
   },
   "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "build": "tsc --build"
+    "dev": "sauf dev"
   },
   "dependencies": {
-    "@laratype/http": "^0.1.0",
-    "@laratype/support": "^0.1.0",
-    "@laratype/log": "^0.1.0",
-    "dayjs": "^1.11.13",
-    "dotenv": "^16.4.5",
-    "laratype": "^0.1.0",
-    "tsx": "^4.16.5",
+    "@laratype/auth": "^0.3.7",
+    "@laratype/console": "^0.3.7",
+    "@laratype/http": "^0.3.7",
+    "@laratype/support": "^0.3.7",
+    "laratype": "^0.3.7",
+    "passport-google-oidc": "^0.1.0",
+    "passport-local": "^1.0.0",
+    "sauf": "^0.3.7",
     "zod": "^3.23.8"
   },
   "devDependencies": {

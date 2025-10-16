@@ -1,4 +1,4 @@
-import { Controller, redirect, Request, response } from "@laratype/http";
+import { Controller, Request, response, redirect } from "@laratype/http";
 import { GeneralTypesEnum } from "@laratype/support";
 
 export class BaseController extends Controller {
@@ -39,6 +39,7 @@ export class BaseController extends Controller {
   }
 
   public helloWorld(req: Request) {
+    console.log()
     return "Hello world"
   }
 

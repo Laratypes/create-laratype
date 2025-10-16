@@ -1,6 +1,7 @@
-import { ServiceProvider } from "@laratype/support";
+import { DatabaseServiceProvider } from "@laratype/database";
 import RouteServiceProvider from "../src/providers/RouteServiceProvider";
 
 export default [
   RouteServiceProvider,
-] satisfies Array<typeof ServiceProvider>
+  DatabaseServiceProvider,
+]
