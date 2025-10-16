@@ -43,3 +43,28 @@ export const mergePackageJson = (targetDir: string, sourceDir: string) => {
 
   return mergedPackageJson
 }
+
+export const overwriteLatestPackageVersions = (packageJsonPath: string, packageJson: any) => {
+  const rootPackageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
+  const currentVersion = rootPackageJson.version;
+  const replace = (deps: any) => {
+    for (const dep in deps) {
+      if (deps[dep] === "latest-version") {
+        deps[dep] = `^${currentVersion}`;
+      }
+    }
+  }
+  if (packageJson.dependencies) {
+    replace(packageJson.dependencies);
+  }
+
+  if (packageJson.devDependencies) {
+    replace(packageJson.devDependencies);
+  }
+
+  if (packageJson.peerDependencies) {
+    replace(packageJson.peerDependencies);
+  }
+
+  return packageJson;
+}

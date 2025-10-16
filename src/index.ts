@@ -4,7 +4,7 @@ import * as fs from 'fs';
 import { bold, green, red } from 'kolorist';
 import { resolve } from "path";
 import prompts from 'prompts';
-import { mergePackageJson } from './utils/deepMergeObject';
+import { mergePackageJson, overwriteLatestPackageVersions } from './utils/deepMergeObject';
 import { createFolder, mergeDir } from './utils/mergeDir';
 
 let defaultProjectName = 'laratype-test' // Change this to your desired project name
@@ -25,13 +25,13 @@ const steps = {
       return true
     }
   },
-  usePrisma: {
-    dir: 'prisma',
+  useORM: {
+    dir: 'orm',
     action(choose: boolean) {
       if (choose) {
-        const prismaDir = buildPath(this.dir);
-        mergeDir(targetDir, prismaDir);
-        const packageJsonMerged = mergePackageJson(targetDir, prismaDir);
+        const ormDir = buildPath(this.dir);
+        mergeDir(targetDir, ormDir);
+        const packageJsonMerged = mergePackageJson(targetDir, ormDir);
         packageJsonMerged.name = defaultProjectName
         fs.writeFileSync(targetDir + "/package.json", JSON.stringify(packageJsonMerged, null, 4));
       }
@@ -55,9 +55,9 @@ const questions: prompts.PromptObject<keyof typeof steps>[] = [
     }
   },
   {
-    name: 'usePrisma',
+    name: 'useORM',
     type: 'confirm',
-    message: 'Do you want to use Prisma?',
+    message: 'Do you want to use ORM?',
     initial: true,
   }
 ]
@@ -71,6 +71,10 @@ const init = async () => {
     stepResult = steps[key].action(val);
     if (!stepResult) break;
   }
+  const packageJsonPath = targetDir + "/package.json";
+  const rootPackageJsonPath = resolve(__dirname, '../package.json');
+  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
+  fs.writeFileSync(packageJsonPath, JSON.stringify(overwriteLatestPackageVersions(rootPackageJsonPath, packageJson), null, 2));
   if (stepResult) {
     console.log(`Your project ${green(defaultProjectName)} has been initialized.`);
     console.log(green(`cd ${defaultProjectName}`));
