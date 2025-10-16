@@ -75,6 +75,9 @@ const init = async () => {
   const rootPackageJsonPath = resolve(__dirname, '../package.json');
   const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
   fs.writeFileSync(packageJsonPath, JSON.stringify(overwriteLatestPackageVersions(rootPackageJsonPath, packageJson), null, 2));
+
+  fs.renameSync(targetDir + "/.env.example", targetDir + "/.env");
+
   if (stepResult) {
     console.log(`Your project ${green(defaultProjectName)} has been initialized.`);
     console.log(green(`cd ${defaultProjectName}`));
