@@ -1,6 +1,6 @@
 {
   "name": "create-laratype",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "Create laratype framework",
   "scripts": {
     "start": "tsx src/index.ts",
