@@ -9,7 +9,7 @@ export default {
   default: {
     guard: Env.get('AUTH_GUARD', 'web')
   },
-  
+
   guards: {
     web: {
       strategyName: 'local',
@@ -19,6 +19,7 @@ export default {
         passwordField: 'password',
       },
       provider: User,
+      verification: 'jwt',
     },
     api: {
       strategyName: 'google',
@@ -30,6 +31,7 @@ export default {
         callbackURL: '/api/passport/google/callback',
         scope: ['profile', 'email'],
       },
+      verification: 'jwt',
     }
   },
 
