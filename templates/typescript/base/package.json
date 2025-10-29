@@ -12,14 +12,14 @@
     "dev": "sauf dev"
   },
   "dependencies": {
-    "@laratype/auth": "^0.3.7",
-    "@laratype/console": "^0.3.7",
-    "@laratype/http": "^0.3.7",
-    "@laratype/support": "^0.3.7",
-    "laratype": "^0.3.7",
+    "@laratype/auth": "latest-version",
+    "@laratype/console": "latest-version",
+    "@laratype/http": "latest-version",
+    "@laratype/support": "latest-version",
+    "laratype": "latest-version",
     "passport-google-oidc": "^0.1.0",
     "passport-local": "^1.0.0",
-    "sauf": "^0.3.7",
+    "sauf": "latest-version",
     "zod": "^3.23.8"
   },
   "devDependencies": {
