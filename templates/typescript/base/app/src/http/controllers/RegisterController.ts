@@ -1,6 +1,6 @@
 import { Controller } from "@laratype/http";
+import User from "../../models/User";
 import CreateUserRequest from "../requests/CreateUserRequest";
-import { User } from "../../models/User";
 
 export default class RegisterController extends Controller {
 
@@ -11,5 +11,5 @@ export default class RegisterController extends Controller {
     return user;
   }
 
-  
+
 }

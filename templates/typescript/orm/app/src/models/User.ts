@@ -1,7 +1,7 @@
 import { Column, Entity, Model, PrimaryGeneratedColumn } from "@laratype/database"
 
 @Entity()
-export class User extends Model {
+export default class User extends Model {
   @PrimaryGeneratedColumn()
   id: number
 

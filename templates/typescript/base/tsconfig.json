@@ -2,19 +2,16 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "ES2022",
-    "strict": true,
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
     "lib": ["ES2022"],
-    "sourceMap": true,
     "skipLibCheck": true,
-    "outDir": "dist",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "isolatedModules": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true
   },
-  "include": ["./config", "./declare", "./routes", "./src"],
+  "include": ["app/**/*"],
   "exclude": ["node_modules", "<node_internals>/**"]
 }

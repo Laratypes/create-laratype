@@ -1,6 +1,6 @@
 import { Auth } from "@laratype/auth";
-import { Controller, Request } from "@laratype/http";
-import { User } from "../../models/User";
+import { Controller, Request, UseStatusCode } from "@laratype/http";
+import User from "../../models/User";
 
 export class LoginController extends Controller {
 
@@ -9,7 +9,8 @@ export class LoginController extends Controller {
       test: true,
     }
   }
-  
+
+  @UseStatusCode(201)
   public login(req: Request) {
     const user = Auth.user<User>()
     return user
@@ -20,7 +21,7 @@ export class LoginController extends Controller {
       callback: true,
     }
   }
-  
+
   public handleGoogleLogin(req: Request) {
     return {
       callback: true,

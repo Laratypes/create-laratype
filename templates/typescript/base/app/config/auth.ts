@@ -2,7 +2,7 @@ import { PassportStrategy, Strategy } from "@laratype/auth";
 import { LaratypeConfig as Config, Env } from "@laratype/support";
 import GoogleStrategy from 'passport-google-oidc';
 import LocalStrategy from 'passport-local';
-import { User } from "../src/models/User";
+import User from "../src/models/User";
 
 export default {
 

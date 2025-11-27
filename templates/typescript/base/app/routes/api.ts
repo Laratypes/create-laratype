@@ -1,4 +1,4 @@
-import { RouteOptions } from "@laratype/http";
+import { RouteOptions, controller } from "@laratype/http";
 import { BaseController } from "../src/http/controllers/BaseController";
 import { LoginController } from "../src/http/controllers/LoginController";
 import RegisterController from "../src/http/controllers/RegisterController";
@@ -11,13 +11,13 @@ export const baseRouteApi: RouteOptions = {
   middleware: [
     Web
   ],
-  controller: BaseController.__invoke('home'),
+  controller: controller(BaseController, 'home'),
   request: TestRequest,
   method: "get",
   children: [
     {
       path: '/register',
-      controller: RegisterController.__invoke('register'),
+      controller: controller(RegisterController, 'register'),
       method: "post",
       request: CreateUserRequest,
     },
@@ -27,7 +27,7 @@ export const baseRouteApi: RouteOptions = {
         {
           path: '/login',
           method: "post",
-          controller: LoginController.__invoke('login'),
+          controller: controller(LoginController, 'login'),
           middleware: [
             LocalAuthentication,
           ]
