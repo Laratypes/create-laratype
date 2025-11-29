@@ -13,7 +13,9 @@ export class LoginController extends Controller {
   @UseStatusCode(201)
   public login(req: Request) {
     const user = Auth.user<User>()
-    return user
+    return {
+      user: user.getUser(),
+    }
   }
 
   public handleGoogleCallback(req: Request) {

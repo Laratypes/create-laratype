@@ -1,6 +1,6 @@
 {
   "name": "create-laratype",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Create laratype framework",
   "scripts": {
     "start": "tsx src/index.ts",
@@ -17,13 +17,13 @@
     "prompts": "^2.4.2"
   },
   "devDependencies": {
-    "@laratype/auth": "^0.5.3",
-    "@laratype/database": "^0.5.3",
-    "@laratype/http": "^0.5.3",
-    "@laratype/support": "^0.5.3",
+    "@laratype/auth": "^0.5.4",
+    "@laratype/database": "^0.5.4",
+    "@laratype/http": "^0.5.4",
+    "@laratype/support": "^0.5.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/prompts": "^2.4.9",
-    "laratype": "^0.5.3",
+    "laratype": "^0.5.4",
     "rollup": "^4.20.0",
     "tslib": "^2.6.3",
     "tsx": "^4.16.5",
